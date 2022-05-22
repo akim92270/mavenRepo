@@ -46,7 +46,7 @@ public class _01_AppleTest {
     }
 
     @Test
-    public void x(){
+    public void X(){
         //fail() method is used to fail a test on purpose
         Assert.fail("Failure on purpose");
     }
