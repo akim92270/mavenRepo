@@ -1,57 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
+<testng-results skipped="0" failed="1" ignored="0" total="7" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="21546" started-at="2022-05-22T12:04:39 CDT" finished-at="2022-05-22T12:05:01 CDT">
+  <suite name="Command line suite" duration-ms="26346" started-at="2022-05-22T15:54:42 CDT" finished-at="2022-05-22T15:55:09 CDT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="21546" started-at="2022-05-22T12:04:39 CDT" finished-at="2022-05-22T12:05:01 CDT">
+    <test name="Command line test" duration-ms="26346" started-at="2022-05-22T15:54:42 CDT" finished-at="2022-05-22T15:55:09 CDT">
       <class name="scripts._03_EtsyTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._03_EtsyTest@e45f292]" name="setup" is-config="true" duration-ms="1267" started-at="2022-05-22T12:04:53 CDT" finished-at="2022-05-22T12:04:54 CDT">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._03_EtsyTest@31a5c39e]" name="setup" is-config="true" duration-ms="1248" started-at="2022-05-22T15:54:54 CDT" finished-at="2022-05-22T15:54:56 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testEtsyLogo()[pri:0, instance:scripts._03_EtsyTest@e45f292]" name="testEtsyLogo" duration-ms="1986" started-at="2022-05-22T12:04:54 CDT" finished-at="2022-05-22T12:04:56 CDT">
+        <test-method status="PASS" signature="testEtsyLogo()[pri:1, instance:scripts._03_EtsyTest@31a5c39e]" name="testEtsyLogo" duration-ms="1893" started-at="2022-05-22T15:54:56 CDT" finished-at="2022-05-22T15:54:57 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEtsyLogo -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._03_EtsyTest@e45f292]" name="teardown" is-config="true" duration-ms="775" started-at="2022-05-22T12:04:56 CDT" finished-at="2022-05-22T12:04:57 CDT">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._03_EtsyTest@31a5c39e]" name="teardown" is-config="true" duration-ms="803" started-at="2022-05-22T15:54:57 CDT" finished-at="2022-05-22T15:54:58 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._03_EtsyTest@e45f292]" name="setup" is-config="true" duration-ms="1273" started-at="2022-05-22T12:04:57 CDT" finished-at="2022-05-22T12:04:58 CDT">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._03_EtsyTest@31a5c39e]" name="setup" is-config="true" duration-ms="1315" started-at="2022-05-22T15:54:58 CDT" finished-at="2022-05-22T15:55:00 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testEtsySearch()[pri:0, instance:scripts._03_EtsyTest@e45f292]" name="testEtsySearch" duration-ms="1963" started-at="2022-05-22T12:04:58 CDT" finished-at="2022-05-22T12:05:00 CDT">
+        <test-method status="PASS" signature="testEtsySearch()[pri:3, instance:scripts._03_EtsyTest@31a5c39e]" name="testEtsySearch" duration-ms="1981" started-at="2022-05-22T15:55:00 CDT" finished-at="2022-05-22T15:55:02 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEtsySearch -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._03_EtsyTest@e45f292]" name="teardown" is-config="true" duration-ms="829" started-at="2022-05-22T12:05:00 CDT" finished-at="2022-05-22T12:05:01 CDT">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._03_EtsyTest@31a5c39e]" name="teardown" is-config="true" duration-ms="853" started-at="2022-05-22T15:55:02 CDT" finished-at="2022-05-22T15:55:02 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._03_EtsyTest@31a5c39e]" name="setup" is-config="true" duration-ms="1251" started-at="2022-05-22T15:55:02 CDT" finished-at="2022-05-22T15:55:04 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testEtsySearchResult()[pri:3, instance:scripts._03_EtsyTest@31a5c39e]" name="testEtsySearchResult" duration-ms="3998" started-at="2022-05-22T15:55:04 CDT" depends-on-methods="scripts._03_EtsyTest.testEtsySearch" finished-at="2022-05-22T15:55:08 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEtsySearchResult -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._03_EtsyTest@31a5c39e]" name="teardown" is-config="true" duration-ms="931" started-at="2022-05-22T15:55:08 CDT" finished-at="2022-05-22T15:55:09 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- scripts._03_EtsyTest -->
       <class name="scripts._02_TechGlobalTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._02_TechGlobalTest@5bcab519]" name="setup" is-config="true" duration-ms="1239" started-at="2022-05-22T12:04:50 CDT" finished-at="2022-05-22T12:04:51 CDT">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._02_TechGlobalTest@5f2108b5]" name="setup" is-config="true" duration-ms="1212" started-at="2022-05-22T15:54:52 CDT" finished-at="2022-05-22T15:54:53 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testApplicationFormHeading()[pri:0, instance:scripts._02_TechGlobalTest@5bcab519]" name="testApplicationFormHeading" duration-ms="701" started-at="2022-05-22T12:04:51 CDT" finished-at="2022-05-22T12:04:52 CDT">
+        <test-method status="PASS" signature="testApplicationFormHeading()[pri:0, instance:scripts._02_TechGlobalTest@5f2108b5]" name="testApplicationFormHeading" duration-ms="652" started-at="2022-05-22T15:54:53 CDT" finished-at="2022-05-22T15:54:54 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApplicationFormHeading -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._02_TechGlobalTest@5bcab519]" name="teardown" is-config="true" duration-ms="703" started-at="2022-05-22T12:04:52 CDT" finished-at="2022-05-22T12:04:53 CDT">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._02_TechGlobalTest@5f2108b5]" name="teardown" is-config="true" duration-ms="767" started-at="2022-05-22T15:54:54 CDT" finished-at="2022-05-22T15:54:54 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- scripts._02_TechGlobalTest -->
       <class name="scripts._01_AppleTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="setup" is-config="true" duration-ms="4197" started-at="2022-05-22T12:04:39 CDT" finished-at="2022-05-22T12:04:43 CDT">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@e45f292]" name="setup" is-config="true" duration-ms="2066" started-at="2022-05-22T15:54:42 CDT" finished-at="2022-05-22T15:54:44 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="X()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="X" duration-ms="5" started-at="2022-05-22T12:04:43 CDT" finished-at="2022-05-22T12:04:43 CDT">
+        <test-method status="PASS" signature="testAppleTitle()[pri:1, instance:scripts._01_AppleTest@e45f292]" name="testAppleTitle" duration-ms="1876" started-at="2022-05-22T15:54:44 CDT" description="TC123" finished-at="2022-05-22T15:54:46 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppleTitle -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@e45f292]" name="teardown" is-config="true" duration-ms="750" started-at="2022-05-22T15:54:46 CDT" finished-at="2022-05-22T15:54:47 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@e45f292]" name="setup" is-config="true" duration-ms="1240" started-at="2022-05-22T15:54:47 CDT" finished-at="2022-05-22T15:54:48 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testAppleURL()[pri:2, instance:scripts._01_AppleTest@e45f292]" name="testAppleURL" duration-ms="829" started-at="2022-05-22T15:54:48 CDT" description="TC12334" finished-at="2022-05-22T15:54:49 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppleURL -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@e45f292]" name="teardown" is-config="true" duration-ms="741" started-at="2022-05-22T15:54:49 CDT" finished-at="2022-05-22T15:54:50 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@e45f292]" name="setup" is-config="true" duration-ms="1253" started-at="2022-05-22T15:54:50 CDT" finished-at="2022-05-22T15:54:51 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="X()[pri:3, instance:scripts._01_AppleTest@e45f292]" name="X" duration-ms="0" started-at="2022-05-22T15:54:51 CDT" description="TC3833" finished-at="2022-05-22T15:54:51 CDT">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Failure on purpose]]>
@@ -104,31 +140,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- X -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="teardown" is-config="true" duration-ms="652" started-at="2022-05-22T12:04:43 CDT" finished-at="2022-05-22T12:04:44 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="setup" is-config="true" duration-ms="1239" started-at="2022-05-22T12:04:44 CDT" finished-at="2022-05-22T12:04:45 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testAppleTitle()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="testAppleTitle" duration-ms="1040" started-at="2022-05-22T12:04:45 CDT" finished-at="2022-05-22T12:04:46 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAppleTitle -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="teardown" is-config="true" duration-ms="734" started-at="2022-05-22T12:04:46 CDT" finished-at="2022-05-22T12:04:47 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="setup" is-config="true" duration-ms="1269" started-at="2022-05-22T12:04:47 CDT" finished-at="2022-05-22T12:04:48 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testAppleURL()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="testAppleURL" duration-ms="873" started-at="2022-05-22T12:04:48 CDT" finished-at="2022-05-22T12:04:49 CDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAppleURL -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@6fd02e5]" name="teardown" is-config="true" duration-ms="756" started-at="2022-05-22T12:04:49 CDT" finished-at="2022-05-22T12:04:50 CDT">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@e45f292]" name="teardown" is-config="true" duration-ms="646" started-at="2022-05-22T15:54:51 CDT" finished-at="2022-05-22T15:54:52 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

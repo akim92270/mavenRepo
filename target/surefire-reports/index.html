@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -139,6 +139,11 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="scripts._03_EtsyTest" hash-for-method="testEtsySearch">testEtsySearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="scripts._03_EtsyTest" hash-for-method="testEtsySearchResult">testEtsySearchResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Command_line_suite -->
                   </li>
                 </ul>
@@ -167,10 +172,38 @@
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 ... Removed 38 stack frames
 </div> <!-- stack-trace -->
+                  <em>
+(TC3833)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">scripts._01_AppleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAppleTitle">
+                  </a> <!-- testAppleTitle -->
+                  <span class="method-name">testAppleTitle</span>
+                  <em>
+(TC123)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAppleURL">
+                  </a> <!-- testAppleURL -->
+                  <span class="method-name">testAppleURL</span>
+                  <em>
+(TC12334)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -191,26 +224,11 @@
                   <span class="method-name">testEtsySearch</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
-          <div class="suite-Command_line_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">scripts._01_AppleTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAppleTitle">
-                  </a> <!-- testAppleTitle -->
-                  <span class="method-name">testAppleTitle</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAppleURL">
-                  </a> <!-- testAppleURL -->
-                  <span class="method-name">testAppleURL</span>
+                  <a name="testEtsySearchResult">
+                  </a> <!-- testEtsySearchResult -->
+                  <span class="method-name">testEtsySearchResult</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -283,36 +301,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testEtsyLogo')
+data.setCell(0, 1, 'testEtsySearchResult')
 data.setCell(0, 2, 'scripts._03_EtsyTest')
-data.setCell(0, 3, 1986);
+data.setCell(0, 3, 3998);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testEtsySearch')
 data.setCell(1, 2, 'scripts._03_EtsyTest')
-data.setCell(1, 3, 1963);
+data.setCell(1, 3, 1981);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAppleTitle')
-data.setCell(2, 2, 'scripts._01_AppleTest')
-data.setCell(2, 3, 1040);
+data.setCell(2, 1, 'testEtsyLogo')
+data.setCell(2, 2, 'scripts._03_EtsyTest')
+data.setCell(2, 3, 1893);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testAppleURL')
+data.setCell(3, 1, 'testAppleTitle')
 data.setCell(3, 2, 'scripts._01_AppleTest')
-data.setCell(3, 3, 873);
+data.setCell(3, 3, 1876);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testApplicationFormHeading')
-data.setCell(4, 2, 'scripts._02_TechGlobalTest')
-data.setCell(4, 3, 701);
+data.setCell(4, 1, 'testAppleURL')
+data.setCell(4, 2, 'scripts._01_AppleTest')
+data.setCell(4, 3, 829);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'X')
-data.setCell(5, 2, 'scripts._01_AppleTest')
-data.setCell(5, 3, 5);
+data.setCell(5, 1, 'testApplicationFormHeading')
+data.setCell(5, 2, 'scripts._02_TechGlobalTest')
+data.setCell(5, 3, 652);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'X')
+data.setCell(6, 2, 'scripts._01_AppleTest')
+data.setCell(6, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -344,80 +366,92 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">X</span>
-                <span class="method-start">4198 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">4209 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">4863 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <span class="method-name">testAppleTitle</span>
-                <span class="method-start">6102 ms</span>
+                <span class="method-start">2067 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">7143 ms</span>
+                <span class="method-start">3944 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">7878 ms</span>
+                <span class="method-start">4696 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAppleURL</span>
-                <span class="method-start">9147 ms</span>
+                <span class="method-start">5936 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">10020 ms</span>
+                <span class="method-start">6765 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">7507 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">X</span>
+                <span class="method-start">8760 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">8763 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._02_TechGlobalTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">10778 ms</span>
+                <span class="method-start">9410 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testApplicationFormHeading</span>
-                <span class="method-start">12017 ms</span>
+                <span class="method-start">10622 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">12718 ms</span>
+                <span class="method-start">11274 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._03_EtsyTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">13421 ms</span>
+                <span class="method-start">12042 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testEtsyLogo</span>
-                <span class="method-start">14689 ms</span>
+                <span class="method-start">13290 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">16675 ms</span>
+                <span class="method-start">15183 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">17451 ms</span>
+                <span class="method-start">15987 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testEtsySearch</span>
-                <span class="method-start">18725 ms</span>
+                <span class="method-start">17302 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">20689 ms</span>
+                <span class="method-start">19284 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">20138 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testEtsySearchResult</span>
+                <span class="method-start">21390 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">25388 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

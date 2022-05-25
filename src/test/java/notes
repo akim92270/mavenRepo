@@ -1,0 +1,153 @@
+MAVEN Advantages:
+	1. Maven provides a simple folder structure that is used to differentiate development from tests.
+		-main -> used by developers
+		-test -> used for testing (developers test unit testing in testing)
+
+	2. pom.xml
+		-to centralize(to store) all the dependencies, plugins, profiles, and more.
+		-it makes maintenance of dependencies with their version much easier.
+		-target folder all the reports are stored here.
+
+Maven commands:
+	-mvn clean (deletes previous target folder)
+	-mvn compile (compiles the main package)
+	-mvn test-compile (compiles the test package)
+	-mvn test (executes all the tests in the test package)
+	-mvn install (updates the .m2 folder)
+	-mvn package (creates jar or war files)
+	-mvn deploy (deploys code to the remote repository)
+	-mvn archetype: generate -> create a new Maven project
+
+
+HOW TO RUN TESTS
+All test package 		-mvn test
+Specific class			-mvn -Dtest=className test
+Specific test 			-mvn -Dtest=className#testName test
+
+Note: We wil name all our class names that has @Test annotations as below
+ClassName1Test
+ClassName2Test
+-surefire-plugin -customizes the executable class names.
+
+mvnrepository.com is where we get all our dependencies in our framework.
+
+WebDriverManager - Boni Garcia
+MANUAL WAY: download chromedriver and set it for out UI scripts using System.setProperty("webdriver.chrome.driver", "path to the chromedriver")
+
+geckodriver webdriver is for selenium
+
+
+TESTNG (one of the most widely used open-source testing framework)
+-Both TestNG and JUnit are used to do unit testing for developers
+-BUT, as testers we use them to structure our test.
+-They are going to help us to organize our UI and backend test properly.
+They help prioritizing the test scripts, creating dependency between test scripts, creating reports and asserting expected script results.
+
+Top 3 Advantages of TESTNG
+reporting
+annotations -> @BeforeMethod, AfterMethod, @Test
+assertions -> assertEquals(), assertTrue(), fail()
+
+1. @BeforeMethod
+It used to set up all tasks that you need to run before your actual tests.
+It is executed before each Test
+
+2. @AfterMethod
+It is used to run tearDown.
+
+
+@BeforeSuite
+    public void beforeSuite(){
+        System.out.println("This is before Suite");
+    }
+
+    @AfterSuite
+    public void afterSuite(){git status
+        System.out.println("This is after Suite");
+    }
+
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("This is before Test");
+    }
+
+    @AfterTest
+    public void afterTest(){
+        System.out.println("This is after Test");
+    }
+
+    @BeforeClass
+    public void beforeClass(){
+        System.out.println("This is before Class");
+    }
+
+    @AfterClass
+    public void afterClass(){
+        System.out.println("This is after Class");
+    }
+
+    @BeforeMethod
+    public void beforeMethod(){
+        System.out.println("This is before Method");
+    }
+
+    @AfterMethod
+    public void afterMethod(){
+        System.out.println("This is after Method");
+    }
+
+    @Test
+    public void test1(){
+        System.out.println("This is Test1");
+    }
+
+    @Test
+    public void test2(){
+        System.out.println("This is Test2");
+    }
+
+
+
+Priority IN TESTING
+-TestNG enables testers to set priority for tests - execution pattern can be set by tester with priority.
+-By default every test is being executed alphabetically but we can organize our scripts with priority which is zero by default
+Note: You can use negative numbers as well. In this case, the test that has smallest priority will execute first.
+NOTE: If multiple tests have the same priority then they will execute in alphabetically.
+NOTE: priority keyword can only be used with @Test Methods
+
+
+// NOTE: By default, all the tests are running by alphabetical order. But this is not the proper way,
+// so we will create our own way to put tests in order with 'priority' keyword.
+// PRIORITY KEYWORD IS USED TO PROVIDE COSTUME ORDERING OF THE TEST EXECUTION. EX: IF A TEST NEEDS TO RUN BEFORE ANOTHER DUE TO DEPENDENCIES.
+// syntax: @Test(priority = 1) --> the # can be negative, zero, positive values (minimum value will run first; if same # then it'll run alphabetically).
+
+Description in TESTNG
+@Test(description = "TC123: Validate Application form heading")
+
+-Description keyword can be used to associate test cases with their related scripts
+-It increases readability for the tests we have and less effort for new joiners.
+
+TC123: Validate Application form heading
+1. Go to "https://www.techglobalschool.com/apply-now"
+2. Validate the heading1 is displayed and the text for it is ="Application Form"
+
+HOW TO IGNORE A TEST SCRIPT
+1. Use @Ignore annotation on the top of @Test annotation to ignore the particular test
+Syntax:
+@Ignore
+@Test
+
+2. use (enabled=false) keyword
+Syntax:
+@Test(enabled=false)
+
+NOTE: The purpose of ignoring test case could be that you already know it has a bug and will fail or it could also be not completed yet and you don't have to run.
+
+Creating dependency between tests
+-we use dependsOnMethods to override priority between test scripts.
+-The method that depends on other methods will always be executed last
+
+TESTNG Assertions
+Assert.assertTrue() -> isSelected(), isDisplayed, isEnabled()
+Assert.fail() -> for known issues
+Assert.assertEquals() -> comparison of two arguments (actual, expected)

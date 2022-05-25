@@ -19,7 +19,7 @@ public class _01_AppleTest {
     }
 
     // 2. Validation of test - test
-    @Test
+    @Test(priority = 1, description = "TC123")
     public void testAppleTitle(){
         driver.get("https://www.apple.com/");
 
@@ -35,7 +35,7 @@ public class _01_AppleTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
-    @Test
+    @Test(priority = 2, description = "TC12334")
     public void testAppleURL(){
         driver.get("https://www.apple.com/");
 
@@ -45,7 +45,7 @@ public class _01_AppleTest {
         Assert.assertEquals(actualURL, expectedURL);
     }
 
-    @Test
+    @Test(priority = 3, description = "TC3833")
     public void X(){
         //fail() method is used to fail a test on purpose
         Assert.fail("Failure on purpose");
