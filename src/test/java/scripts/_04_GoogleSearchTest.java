@@ -13,7 +13,7 @@ public class _04_GoogleSearchTest extends Base{
     3. Validate the results are more than zero
      */
 
-    @Test
+    @Test (priority = 1, description = "TC765: Validate Google search")
     public void testGoogleSearch(){
         driver.get("https://www.google.com/");
 

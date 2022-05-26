@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.EtsySearchPage;
 
+import java.util.List;
+
 public class _03_EtsyTest extends Base{
     /*
     1. Go to https://www.etsy.com/
@@ -64,5 +66,40 @@ public class _03_EtsyTest extends Base{
 
         Assert.assertTrue(Integer.parseInt(etsySearchPage.resultTag.getText().replaceAll("[^0-9]", "")) > 0);
         // Assert.assertTrue(Integer.parseInt(resultTag.getText().substring(0, resultTag.getText().indexOf(" ")).replace(",", "")) > 0);
+    }
+
+    /*
+    TC905: Validate Google Search results for “MacBook Pro”
+    Given user navigates to “https://www.etsy.com/”
+    Then user should see below menu item links with expected texts
+    Father’s Day Gifts
+    Jewelry & Accessories
+    Clothing & Shoes
+    Home & Living
+    Wedding & Party
+    Toys & Entertainment
+    Art & Collectibles
+    Craft Supplies
+    Gifts & Gift Cards
+     */
+
+    @Test(priority = 4, description = "TC905: Validate Etsy main header")
+    public void testMainHeader(){
+        driver.get("https://www.etsy.com/");
+
+        String[] expectedTexts = {
+                "Father's Day Gifts",
+                "Jewelry & Accessories",
+                "Clothing & Shoes",
+                "Home & Living",
+                "Wedding & Party",
+                "Toys & Entertainment",
+                "Art & Collectibles",
+                "Craft Supplies",
+                "Gifts & Gift Cards"};
+
+        for (int i = 0; i < 9; i++) {
+            Assert.assertEquals(etsySearchPage.mainHeaderLinks.get(i).getText(), expectedTexts[i]);
+        }
     }
 }

@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EtsySearchPage {
 
     public EtsySearchPage(WebDriver driver){
@@ -24,4 +27,7 @@ public class EtsySearchPage {
 
     @FindBy(css = ".wt-display-inline-flex-sm>span")
     public WebElement resultTag;
+
+    @FindBy(css = "ul[data-ui='top-nav-category-list']//span")
+    public List<WebElement> mainHeaderLinks;
 }
