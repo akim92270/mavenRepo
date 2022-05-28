@@ -23,4 +23,14 @@ public class _04_GoogleSearchTest extends Base{
 
         Assert.assertTrue(Long.parseLong(results.substring(results.indexOf(" ")+1, results.indexOf("results")-1).replace(",", "")) > 0);
     }
+
+    @Test(priority = 2, description = "TC123: Validate Google Store Link")
+    public void testGoogleStoreLink(){
+        driver.get("https://www.google.com");
+
+        googleSearchPage.storeLink.click();
+
+        //Throw exception - Use explicit wait to prevent
+        Assert.assertEquals(driver.getTitle(),"Google Store for Google Made Devices & Accessories");
+    }
 }
