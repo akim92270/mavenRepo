@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import utilities.Waiter;
 
-public class _05_CheckBoxTest extends Base{
+public class _05_CheckBoxTest extends Base {
 
     /*
     Go to http://the-internet.herokuapp.com/
@@ -18,7 +18,7 @@ public class _05_CheckBoxTest extends Base{
      */
 
     @Test(priority = -1, description = "TC001: Validate checkbox in hero app")
-    public void testCheckBoxInHeroApp(){
+    public void testCheckBoxInHeroApp() {
         driver.get("http://the-internet.herokuapp.com/");
 
         Waiter.pause(2);

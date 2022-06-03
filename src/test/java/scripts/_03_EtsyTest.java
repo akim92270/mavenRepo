@@ -4,7 +4,7 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class _03_EtsyTest extends Base{
+public class _03_EtsyTest extends Base {
     /*
     1. Go to https://www.etsy.com/
     2. Validate Etsy logo is displayed
@@ -14,7 +14,7 @@ public class _03_EtsyTest extends Base{
 
     // 2. Validation of test - test
     @Test(priority = 1)
-    public void testEtsyLogo(){
+    public void testEtsyLogo() {
         driver.get("https://www.etsy.com/");
 
         //Get logo web element from EtsyPage
@@ -30,7 +30,7 @@ public class _03_EtsyTest extends Base{
     testEtsySearch
      */
     @Test(priority = 3)
-    public void testEtsySearch(){
+    public void testEtsySearch() {
         driver.get("https://www.etsy.com/");
 
         //Get searchInputBox and searchButton web elements from EtsyPage
@@ -47,7 +47,7 @@ public class _03_EtsyTest extends Base{
     3. Validate the results are more than zero
      */
     @Test(priority = 2, dependsOnMethods = "testEtsySearch")
-    public void testEtsySearchResult(){
+    public void testEtsySearchResult() {
         driver.get("https://www.etsy.com/");
 
         //Get searchInputBox again from EtsySearchPage
@@ -78,7 +78,7 @@ public class _03_EtsyTest extends Base{
      */
 
     @Test(priority = 4, description = "TC905: Validate Etsy main header")
-    public void testMainHeader(){
+    public void testMainHeader() {
         driver.get("https://www.etsy.com/");
 
         String[] expectedTexts = {
