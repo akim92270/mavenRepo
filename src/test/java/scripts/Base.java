@@ -24,6 +24,7 @@ public class Base {
     GoogleSearchResultPage googleSearchResultPage;
     HeroAppPage heroAppPage;
     FaceBookPage faceBookPage;
+    ExpediaPage expediaPage;
 
     @BeforeMethod
     public void setup(){
@@ -37,10 +38,12 @@ public class Base {
         googleSearchResultPage = new GoogleSearchResultPage(driver);
         heroAppPage = new HeroAppPage(driver);
         faceBookPage = new FaceBookPage(driver);
+        expediaPage = new ExpediaPage(driver);
     }
 
     @AfterMethod
     public void teardown(){
+        //TODO if there is a failure, take screenshot and attach it to the report
         softAssert.assertAll();
         Driver.quitDriver();
     }

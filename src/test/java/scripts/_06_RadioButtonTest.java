@@ -24,9 +24,9 @@ public class _06_RadioButtonTest extends Base{
         Waiter.pause(2);
 
         for(WebElement element : faceBookPage.genderRadioButtons){
-            Assert.assertTrue(element.isDisplayed(), "Element IS NOT displayed");
-            Assert.assertTrue(element.isEnabled(), "Element IS NOT enabled");
-            Assert.assertFalse(element.isSelected(), "Element IS selected");
+            softAssert.assertTrue(element.isDisplayed(), "Element IS NOT displayed");
+            softAssert.assertTrue(element.isEnabled(), "Element IS NOT enabled");
+            softAssert.assertFalse(element.isSelected(), "Element IS selected");
         }
 
         faceBookPage.genderRadioButtons.get(0).click();
