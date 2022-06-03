@@ -13,4 +13,6 @@ public class TGApplicationPage {
 
     @FindBy(xpath = "//div[@id='comp-kh9s3kyz3']//span/span")
     public WebElement heading1;
+
+
 }

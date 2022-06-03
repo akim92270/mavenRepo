@@ -9,7 +9,7 @@ import java.util.List;
 
 public class HeroAppPage {
     public HeroAppPage(WebDriver driver){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//ul/li/a")
@@ -20,9 +20,10 @@ public class HeroAppPage {
 
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
-            if(link.getText().equals(linkText))
-            link.click();
-            break;
+            if(link.getText().equals(linkText)){
+                link.click();
+                break;
+            }
         }
     }
 }

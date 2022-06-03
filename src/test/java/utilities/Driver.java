@@ -11,13 +11,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
+    // 1. Private Constructor
     private Driver(){
 
     }
 
+    // 2. Private Driver
     private static WebDriver driver;
 
-
+    // 3. Get Driver and quit driver Method
     public static WebDriver getDriver(){
         if(driver == null){
             // Telling your system where your chrome driver is located
@@ -48,6 +50,12 @@ public class Driver {
     }
 
     public static void quitDriver(){
+        try{
+            Thread.sleep(3000);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
         if(driver != null){
             driver.manage().deleteAllCookies();
             driver.quit();

@@ -4,17 +4,16 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class _03_EtsyTest extends Base {
+public class _03_EtsyTest extends Base{
     /*
     1. Go to https://www.etsy.com/
     2. Validate Etsy logo is displayed
-
     testEtsyLogo
      */
 
     // 2. Validation of test - test
     @Test(priority = 1)
-    public void testEtsyLogo() {
+    public void testEtsyLogo(){
         driver.get("https://www.etsy.com/");
 
         //Get logo web element from EtsyPage
@@ -26,11 +25,10 @@ public class _03_EtsyTest extends Base {
     /*
     1. Go to https://www.etsy.com/
     2. Validate Etsy search input box and search button is displayed
-
     testEtsySearch
      */
     @Test(priority = 3)
-    public void testEtsySearch() {
+    public void testEtsySearch(){
         driver.get("https://www.etsy.com/");
 
         //Get searchInputBox and searchButton web elements from EtsyPage
@@ -47,7 +45,7 @@ public class _03_EtsyTest extends Base {
     3. Validate the results are more than zero
      */
     @Test(priority = 2, dependsOnMethods = "testEtsySearch")
-    public void testEtsySearchResult() {
+    public void testEtsySearchResult(){
         driver.get("https://www.etsy.com/");
 
         //Get searchInputBox again from EtsySearchPage
@@ -62,8 +60,8 @@ public class _03_EtsyTest extends Base {
         // Assert.assertTrue(Integer.parseInt(resultTag.getText().substring(0, resultTag.getText().indexOf(" ")).replace(",", "")) > 0);
     }
 
+
     /*
-    TC905: Validate Google Search results for “MacBook Pro”
     Given user navigates to “https://www.etsy.com/”
     Then user should see below menu item links with expected texts
     Father’s Day Gifts
@@ -76,13 +74,12 @@ public class _03_EtsyTest extends Base {
     Craft Supplies
     Gifts & Gift Cards
      */
-
     @Test(priority = 4, description = "TC905: Validate Etsy main header")
-    public void testMainHeader() {
+    public void testMainHeader(){
         driver.get("https://www.etsy.com/");
 
         String[] expectedTexts = {
-                "Father's Day Gifts",
+                "Shop Home Sales!",
                 "Jewelry & Accessories",
                 "Clothing & Shoes",
                 "Home & Living",
@@ -93,7 +90,7 @@ public class _03_EtsyTest extends Base {
                 "Gifts & Gift Cards"};
 
         for (int i = 0; i < 9; i++) {
-            Assert.assertEquals(etsySearchPage.mainHeaderLinks.get(i).getText(), expectedTexts[i]);
+            Assert.assertEquals(etsySearchPage.mainHeaderLinks.get(i).getText(), expectedTexts[i], "The expected text IS NOT displayed");
         }
     }
 }
