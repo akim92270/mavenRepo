@@ -25,6 +25,7 @@ public class Driver {
             // Telling your system where your chrome driver is located
             //System.setProperty("webdriver.chrome.driver", "/Users/techglobal/IdeaProjects/selenium_intro/chromedriver");
 
+            //The browser defined below with String is hard-coded
             String browser = "chrome"; // define which browser you will run your test in
 
             switch (browser){
