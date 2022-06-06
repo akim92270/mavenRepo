@@ -26,9 +26,9 @@ public class Driver {
             //System.setProperty("webdriver.chrome.driver", "/Users/techglobal/IdeaProjects/selenium_intro/chromedriver");
 
             //The browser defined below with String is hard-coded
-            String browser = "chrome"; // define which browser you will run your test in
+            //String browser = "chrome"; // define which browser you will run your test in
 
-            switch (browser){
+            switch (ConfigReader.getProperties("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -45,7 +45,7 @@ public class Driver {
                     throw new NotFoundException("Browser IS NOT DEFINED properly!!!");
             }
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperties("implicitWait")), TimeUnit.SECONDS);
         }
         return driver;
     }
