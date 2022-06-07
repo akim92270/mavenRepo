@@ -18,6 +18,21 @@ public class HeroAppPage {
     @FindBy(css = "#checkboxes>input")
     public List<WebElement> checkboxes;
 
+    @FindBy(xpath = "//ul//button")
+    public List<WebElement> alertButtons;
+
+    @FindBy(id = "result")
+    public WebElement resultParagraph;
+
+    public void clickOnAlertButton(String buttonText){
+        for(WebElement element: alertButtons){
+            if(element.getText().equals(buttonText)){
+                element.click();
+                break;
+            }
+        }
+    }
+
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){
@@ -26,4 +41,6 @@ public class HeroAppPage {
             }
         }
     }
+
+
 }
