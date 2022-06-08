@@ -24,19 +24,31 @@ public class HeroAppPage {
     @FindBy(id = "result")
     public WebElement resultParagraph;
 
-    public void clickOnAlertButton(String buttonText){
-        for(WebElement element: alertButtons){
-            if(element.getText().equals(buttonText)){
-                element.click();
-                break;
-            }
-        }
-    }
+    @FindBy(xpath = "//a[text()='iFrame']")
+    public WebElement iFrameLink;
+
+    @FindBy(css = "#tinymce>p")
+    public WebElement contentBox;
+
+    @FindBy(xpath = "//h3")
+    public WebElement iFrameHeading3;
+
+    @FindBy(id = "mce_0_ifr")
+    public WebElement innerIFrame;
 
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){
                 link.click();
+                break;
+            }
+        }
+    }
+
+    public void clickOnAlertButton(String buttonText){
+        for(WebElement element: alertButtons){
+            if(element.getText().equals(buttonText)){
+                element.click();
                 break;
             }
         }
