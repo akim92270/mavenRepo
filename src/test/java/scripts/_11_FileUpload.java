@@ -2,7 +2,6 @@ package scripts;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HeroAppPage;
 import utilities.Waiter;
 
 public class _11_FileUpload extends Base{
@@ -27,7 +26,20 @@ public class _11_FileUpload extends Base{
 
         Assert.assertEquals(heroAppPage.banana.getText(), "File Uploaded!");
         Assert.assertEquals(heroAppPage.uploadedFiles.getText(), "myFileBanana.txt");
+    }
 
+    /*
+    Go to http://the-internet.herokuapp.com/
+    Click on “File Download” link
+    Click on “demo.txt” link
+    Validate “demo.txt” file is downloaded in your “Downloads” folder
+     */
+
+    @Test(priority = 2, description = "File Download")
+    public void testFileDownload(){
+        driver.get("http://the-internet.herokuapp.com/");
+        heroAppPage.clickOnLink("File Download");
+        heroAppPage.myDownloadFile.click();
 
     }
 }

@@ -57,6 +57,8 @@ public class HeroAppPage {
     @FindBy(css = ".example h3")
     public WebElement banana;
 
+    @FindBy(linkText = "myFileBanana.txt")
+    public WebElement myDownloadFile;
 
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
