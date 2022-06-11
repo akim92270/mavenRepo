@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import utilities.Waiter;
 
 import java.security.Key;
+import java.time.Duration;
 import java.util.List;
 
 public class _12_Actions_Class extends Base{
@@ -19,7 +20,6 @@ public class _12_Actions_Class extends Base{
 
         WebElement address = driver.findElement(By.cssSelector("#comp-kixny3ro span>span"));
 
-        Actions actions = new Actions(driver);
         actions.moveToElement(address).perform(); //This will not work unless you add .build().perform() with Selenium 3 we can add just the perform
         Waiter.pause(2);
 
@@ -54,4 +54,25 @@ public class _12_Actions_Class extends Base{
             System.out.println("==============" + financeDropdownOptions.get(i).getText() + "=====================");
         }
     }
-}
+
+    /*
+    Go to https://www.techglobalschool.com/
+    Click on "Register for Intro Session" link
+    Validate the url is https://www.techglobalschool.com/apply-now-1
+     */
+
+    @Test(priority = 3, description = "Actions | Click")
+    public void clickOnElementPractice(){
+        driver.get("https://www.techglobalschool.com/");
+
+        WebElement registerForIntroLink = driver.findElement(By.cssSelector("#comp-kvjohd5t5>a"));
+//        actions.moveToElement(registerForIntroLink).perform();
+//        Waiter.pause(2);
+//        actions.click(registerForIntroLink).perform();
+
+        actions.moveToElement(registerForIntroLink).pause(Duration.ofSeconds(2)).click().perform();
+
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.techglobalschool.com/apply-now-1");
+
+
+    }
