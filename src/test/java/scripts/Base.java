@@ -1,6 +1,7 @@
 package scripts;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,6 +28,7 @@ public class Base {
     RediffHomePage rediffHomePage;
     AmazonHomePage amazonHomePage;
     TGHomePage tgHomePage;
+    Actions actions;
 
     @BeforeMethod
     public void setup(){
@@ -44,6 +46,7 @@ public class Base {
         rediffHomePage = new RediffHomePage(driver);
         amazonHomePage = new AmazonHomePage(driver);
         tgHomePage = new TGHomePage(driver);
+        actions = new Actions(driver);
     }
 
     @AfterMethod
