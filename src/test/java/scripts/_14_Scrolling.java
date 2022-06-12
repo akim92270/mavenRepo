@@ -16,11 +16,11 @@ public class _14_Scrolling extends Base{
         //Waiter.pause(3);
         //actions.sendKeys(Keys.PAGE_DOWN).perform();
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+
         //js.executeScript("var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);\n" +
         //        "var elementTop = arguments[0].getBoundingClientRect().top;\n" +
         //        "window.scrollBy(0, elementTop-(viewPortHeight/2));", tgHomePage.registerForIntroLink);
-        js.executeScript ("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'})", tgHomePage.registerForIntroLink);
+        //js.executeScript ("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'})", tgHomePage.registerForIntroLink);
         js.executeScript ("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'})", tgHomePage.faceBookIcon);
         Waiter.pause(5);
 
