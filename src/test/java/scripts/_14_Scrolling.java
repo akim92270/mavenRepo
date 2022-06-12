@@ -1,7 +1,5 @@
 package scripts;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import utilities.Waiter;
 

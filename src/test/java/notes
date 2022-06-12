@@ -151,3 +151,38 @@ TESTNG Assertions
 Assert.assertTrue() -> isSelected(), isDisplayed, isEnabled()
 Assert.fail() -> for known issues
 Assert.assertEquals() -> comparison of two arguments (actual, expected)
+
+===========Common Interview Questions=============
+
+How do you find the broken images?
+1. Locate all the images on a page using //img and store them in a List of WebElement
+2. Loop through each element and get their src attribute and validate it is not empty or unknown
+3. This loop will give us all the broken images (using soft assert) and we can report them.
+
+How do you find broken links?
+-Links that are created with anchor "a" tag
+1. Locate all the links on a page using //a and store them in a List of WebElement
+2. Loop through each element and make sure you don't get API errors like 400
+
+What do you do when you get NoSuchElementException?
+1. Check my locator one more time with developer tools by right clicking on the webpage and inspect.
+2. Hard pause to see if it is a synchronization issue. However, hard pause(Thread.sleep()) is not proper to resolve. After you are
+sure it is wait issue, you will update hard pause with an explicit wait
+3. iFrame - switchTo
+4. Windows - switchto
+5. Scrolling into view
+
+What are the most common exceptions you get with Selenium?
+-NoSuchElementException: issues with locators
+-StaleElementReferenceException: When element is losing reference in the DOM.
+-ElementClickInterceptedException: we get this exception when 2 or more web elements are overlapping. Click action is received by
+another web element than the one we want to click.
+-TimeoutsException:
+-AssertionError:
+-NoAlertPresentException, NoSuchWindowException, NoSuchFrameException:
+
+When do you switch driver focus in Selenium?
+-Multiple windows
+-Multiple frames
+-Alerts
+
