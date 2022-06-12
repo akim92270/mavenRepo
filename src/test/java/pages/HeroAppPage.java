@@ -60,6 +60,18 @@ public class HeroAppPage {
     @FindBy(linkText = "myFileBanana.txt")
     public WebElement myDownloadFile;
 
+    @FindBy(css = "#table1 th")
+    public List<WebElement> tableHeader;
+
+    @FindBy(css = "#table1>tbody>tr:nth-child(1)>td")
+    public List<WebElement> firstTableFirstColumn;
+
+    @FindBy(css = "#table1>tbody td:nth-child(2)")
+    public List<WebElement> secondTableSecondColumn;
+
+    @FindBy(css = "#table1 td")
+    public List<WebElement> cellValues;
+
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){
@@ -77,6 +89,4 @@ public class HeroAppPage {
             }
         }
     }
-
-
 }

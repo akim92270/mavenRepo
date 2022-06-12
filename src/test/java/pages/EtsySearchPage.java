@@ -24,10 +24,10 @@ public class EtsySearchPage {
     @FindBy(id = "logo")
     public WebElement logo;
 
-    @FindBy(css = ".wt-display-inline-flex-sm>span")
+    @FindBy(css = ".wt-display-inline-flex-sm span")
     public WebElement resultTag;
 
-    @FindBy(css = "ul[data-ui='top-nav-category-list']//span")
+    @FindBy(css = "ul[data-ui='top-nav-category-list'] span")
     public List<WebElement> mainHeaderLinks;
 
     @FindBy(css = ".signin-header-action")
@@ -38,5 +38,10 @@ public class EtsySearchPage {
 
     @FindBy(id = "join-neu-overlay-title")
     public WebElement signInModalHeading;
+
+    @FindBy(css = "ul[data-node-id='10855']>li")
+    public List<WebElement> jewelryAndAccessoriesItems;
+
+
 
 }

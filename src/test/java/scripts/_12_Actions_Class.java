@@ -5,7 +5,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.GoogleSearchPage;
 import utilities.Waiter;
 
 import java.time.Duration;
@@ -160,5 +159,32 @@ Validate the value attribute for search input box is "TECHGLOBALTECHGLOBAL"
         Waiter.pause(2);
 
         Assert.assertEquals(googleSearchPage.searchInputBox.getAttribute("value"), "TECHGLOBALTECHGLOBAL");
+    }
+
+    /*
+    Go to https://www.etsy.com/
+    Hover over on "Jewelry & Accessories" menu item
+    Validate below categories are displayed with their expected texts
+    Accessories
+    Bags & Purses
+    Necklaces
+    Rings
+    Earrings
+    Bracelets
+    Body Jewelry
+    All Jewelry
+     */
+
+    @Test(priority = 8, description = "Etsy | test")
+    public void etsyTest(){
+        driver.get("https://www.etsy.com/");
+
+        actions.moveToElement(etsySearchPage.mainHeaderLinks.get(1)).perform();
+
+        String[] jewelryMenuItemsText = {"Accessories", "Bags & Purses", "Necklaces", "Rings", "Earrings", "Bracelets", "Body Jewelry", "All Jewelry"};
+        for (int i = 0; i < etsySearchPage.jewelryAndAccessoriesItems.size(); i++) {
+            Waiter.waitUntilTextToBePresentInElement(driver, 3, etsySearchPage.jewelryAndAccessoriesItems.get(i), jewelryMenuItemsText[i]);
+            Assert.assertEquals(etsySearchPage.jewelryAndAccessoriesItems.get(i).getText(), jewelryMenuItemsText[i]);
+        }
     }
 }
