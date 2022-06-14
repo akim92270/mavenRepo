@@ -15,7 +15,7 @@ public class _08_Alerts extends Base{
     Validate heading1 of the modal is "Sign in"
      */
 
-    @Test(priority = 1, description = "TASK-1 - Regular HTML Alert")
+    @Test(priority = 1, description = "TASK-1 - Regular HTML Alert", groups = "Login")
     public void testEtsySignInModal(){
         driver.get("https://www.etsy.com/");
 
