@@ -72,6 +72,15 @@ public class HeroAppPage {
     @FindBy(css = "#table1 td")
     public List<WebElement> cellValues;
 
+    @FindBy(id = "username")
+    public WebElement username;
+
+    @FindBy(id = "password")
+    public WebElement password;
+
+    @FindBy(css = ".radius")
+    public WebElement loginButton;
+
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){
